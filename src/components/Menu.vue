@@ -1,11 +1,11 @@
 <template>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar">
     <div class="container">
-      <span class="navbar-brand">Simulador de Tweets</span>
+      <span class="navbar-titulo">Simulador de Tweets</span>
       <button
         @click="openCloseForm"
         type="button"
-        class="btn pl-4 pr-4"
+        class="boton"
         :class="{ 'btn-success': !showForm, 'btn-danger': showForm }"
       >
         {{ !showForm ? "Nuevo Tweet" : "Cerrar Tweet" }}
@@ -23,4 +23,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.navbar{
+    border-bottom:var(--borders);
+    font-size: 20px;
+    padding: 1rem
+}
+
+</style>

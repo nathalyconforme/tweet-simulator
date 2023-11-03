@@ -52,9 +52,15 @@ export default {
 </script>
 
 <style lang="scss">
+.container {
+  .text-center {
+    // color: #1D9BF0;
+    font-weight: 700;
+  }
+}
 .tweet {
   position: relative;
-  border: 1px solid #ccc;
+  border: var(--borders);
   padding: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -69,7 +75,7 @@ export default {
     position: absolute;
     top: -14px;
     left: 10px;
-    background-color: #fff;
+    background-color: #000000;
     padding: 0 10px;
     font-weight: bold;
   }
@@ -81,16 +87,18 @@ export default {
     font-size: 12px;
     color: grey;
     padding: 0 20px;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    border: var(--borders);
+    background-color: #000000;
   }
 
   svg {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
+    transition: fill 0.3s ease;;
+    
     &:hover {
       cursor: pointer;
-      color: #f00;
+      fill: rgb(29, 155, 240);
     }
   }
 }

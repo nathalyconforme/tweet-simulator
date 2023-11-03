@@ -12,10 +12,10 @@
       <textarea
         class="form-control"
         rows="3"
-        placeholder="Escribe tu Tweet"
+        placeholder="¡¿Qué está pasando?!"
         v-model="tweet"
       ></textarea>
-      <button type="submit" class="btn btn-primary">Enviar Tweet</button>
+      <button type="submit" class="boton">Enviar Tweet</button>
     </form>
   </div>
 </template>
@@ -68,6 +68,7 @@ export default {
   height: 0;
   overflow: hidden;
 
+
   &.open {
     height: auto;
   }
@@ -75,13 +76,23 @@ export default {
   form {
     margin-bottom: 50px;
 
-    input {
+    .form-control {
       margin-bottom: 10px;
+      background: none;
+      border: none;
+      border-bottom: var(--borders);;
+      color: #fff;
+    }
+    .form-control::placeholder {
+      color: #fff;
+    }
+    .form-control:focus {
+      box-shadow: 0px 5px 2px 0rem rgba(29, 156, 240, 0.252);
     }
 
-    button {
-      width: 100%;
-      margin-top: 10px;
+    .boton {
+      justify-content: flex-end;
+      float: right;
     }
   }
 }

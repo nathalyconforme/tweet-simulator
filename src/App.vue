@@ -47,4 +47,33 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+:root{
+  --borders: 1px solid rgb(47, 51, 54);
+  --transition-buttom: background-color 0.3s ease;
+}
+* {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+.boton {
+  background-color: rgb(29, 155, 240);
+  color: #fff;
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-weight: 500;
+  font-size: 15px;
+  border: none;
+  transition: var(--transition-buttom);
+}
+.boton:hover {
+  background-color: rgb(21, 121, 187);
+}
+
+.btn-danger {
+  background-color: rgb(117, 0, 0);
+}
+.btn-danger:hover {
+  background-color: rgb(81, 0, 0);
+}
+</style>
